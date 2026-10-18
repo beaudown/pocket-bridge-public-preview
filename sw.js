@@ -1,6 +1,6 @@
-const CACHE = 'pocket-bridge-e41edf24b4bc';
+const CACHE = 'pocket-bridge-fb4a60c22704';
 const BASE = new URL('./', self.location.href);
-const PRECACHE = ["/pocket-bridge-new/","/pocket-bridge-new/icon.svg","/pocket-bridge-new/manifest.webmanifest","/pocket-bridge-new/fonts.css","/pocket-bridge-new/icon-192.png","/pocket-bridge-new/icon-512.png","/pocket-bridge-new/assets/index-10wZ4aTC.js","/pocket-bridge-new/assets/index-DFEmyome.css"];
+const PRECACHE = ["/pocket-bridge-public-preview/","/pocket-bridge-public-preview/icon.svg","/pocket-bridge-public-preview/manifest.webmanifest","/pocket-bridge-public-preview/fonts.css","/pocket-bridge-public-preview/icon-192.png","/pocket-bridge-public-preview/icon-512.png","/pocket-bridge-public-preview/assets/index-B71DAbgh.js","/pocket-bridge-public-preview/assets/index-DFEmyome.css"];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(PRECACHE))));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith('pocket-bridge-') && key !== CACHE).map(key => caches.delete(key)))).then(()=>self.clients.claim())));
 function shareDb() {
